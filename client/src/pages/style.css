@@ -2,16 +2,14 @@
 @import 'mdb-ui-kit/css/mdb.min.css';
 
 :root {
-  --lightpink: #f8e0e7;
-  --darkpink: #da1884;
+  --grey: ##f1f1f1f1;
   --white: #ffffff;
-  --mauve: #b598a3;
-  --richblack: #0d1321;
+  --black: ##000000;
 }
 
 * {
   /* font */
-  font-family: "Poppins", sans-serif;
+  font-family: "Cormorant", sans-serif;
 }
 
 h1,
@@ -20,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Abril Fatface", serif;
+  font-family: "Cormorant", serif;
 }
 
 body {
@@ -51,7 +49,7 @@ footer {
 }
 
 footer div{
-  background-color: var(--darkpink);
+  background-color: var(--grey);
   height: 2.5em;
   display: flex;
   justify-content: center;
@@ -83,11 +81,11 @@ footer div{
 .btn {
   float: right;
   width: 100%;
-  background-color: var(--lightpink);
-  color: var(--richblack);
-  box-shadow: 0px 4px 4px var(--darkpink) / 0.2;
+  background-color: var(--white);
+  color: var(--blackk);
+  box-shadow: 0px 4px 4px var(--) / 0.2;
   margin: 1%;
-  border: 0.5px solid var(--darkpink);
+  border: 0.5px solid var(--);
   padding: auto;
   font-size: 1rem;
   text-align: center;
@@ -95,15 +93,15 @@ footer div{
 }
 
 .btn:hover {
-  background-color: var(--darkpink);
+  background-color: var(--grey);
   color: var(--white);
-  box-shadow: 0px 4px 4px var(--darkpink) / 0.2;
-  border: 0.5px solid var(--darkpink);
+  box-shadow: 0px 4px 4px var(--grey) / 0.2;
+  border: 0.5px solid var(--black);
 }
 
 small {
   font-size: 0.9rem;
-  color: grey;
+  color: black;
 }
 
 #cardContainer {
@@ -137,7 +135,7 @@ small {
 }
 
 .form-outline .form-control:focus ~ .form-label {
-  color: var(--darkpink);
+  color: var(--black);
 }
 
 .form-helper {
@@ -146,46 +144,37 @@ small {
 }
 
 select {
-  background-color: var(--mauve);
+  background-color: var(--grey);
   border: 0.1rem;
-  border-color: var(--darkpink);
+  border-color: var(--black);
   border-radius: 5px;
   padding: 0.55%;
 }
 
 button {
-  background-color: var(--mauve);
+  background-color: var(--white);
   color: var(--white);
-  box-shadow: 0px 4px 4px var(--darkpink) / 0.2;
+  box-shadow: 0px 4px 4px var(--grey) / 0.2;
   margin: 1%;
   border-radius: 5px;
-  border: 0.5px solid var(--darkpink);
+  border: 0.5px solid var(--black);
   padding: auto;
   text-align: center;
 }
 
 .dropdown-content li,
 .dropdown-content li > span {
-  background-color: var(--mauve);
+  background-color: var(--white);
   color: w;
 }
 
 #cloudBox {
   width: 60%;
   height: auto;
-  background-color: var(--darkpink);
+  background-color: var(--white);
 }
 
-.family-badge {
-  background-color: var(--darkpink);
-  box-shadow: 0px 4px 4px var(--mauve) / 0.2;
-}
 
-.author-badge {
-  background-color: var(--mauve);
-  box-shadow: 0px 4px 4px var(--darkpink) / 0.2;
-  color: var(--richblack);
-}
 
 textarea{
   white-space: pre-wrap;
