@@ -6,7 +6,7 @@ initMDB({ Input });
 export const Footer = () => {
     return (
         <footer>
-          <div>© 2023 Copyright Recipe Rolodex</div>
+          <div>© 2024 Copyright A. Collection</div>
           {/* <a className="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a> */}
       </footer>
     )
