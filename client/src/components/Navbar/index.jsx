@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo/logo.png";
+import Logo from "../../assets/logo/1.png";
 import { initMDB } from "mdb-ui-kit";
-import Auth from "../../utils/auth";
 
 initMDB();
 
@@ -30,7 +29,7 @@ const NavBar = () => {
       target.classList.toggle("show");
     }
   };
-  console.log("Auth.loggedIn:", Auth.loggedIn());
+
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-light bg-body-tertiary ${
@@ -66,26 +65,42 @@ const NavBar = () => {
                 Home
               </Link>
             </li>
-            {Auth.loggedIn() ? (
-              (
-                <> 
-                <li className="nav-item">
-                  <Link className="nav-link" to="/dashboard">
-                    Dashboard
-                  </Link>
-                </li>
-        
-                <li className="nav-item">
-                  <Link className="nav-link" to="/pinnedrecipes">
-                    Pinned Recipe
-                  </Link>
-                </li>
-                </>
-               
-              )
-            ) : (
-              <></>
-            )}
+            {/* Other navigation links */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/FineArtParties">
+                Fine Art Parties
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/Artists">
+                Artists
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/Galleries">
+                Galleries
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/About">
+                About
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/Blog">
+                Blog
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
           </ul>
 
           <Link
@@ -95,26 +110,6 @@ const NavBar = () => {
           >
             Search
           </Link>
-
-          {Auth.loggedIn() ? (
-            // If user is authenticated, show logout button
-            <button
-              onClick={Auth.logout}
-              className="btn"
-              style={{ width: "auto" }}
-            >
-              Logout
-            </button>
-          ) : (
-            // If user is not authenticated, show login button
-            <Link
-              to="/login"
-              className="btn"
-              style={{ width: "auto" }}
-            >
-              Login
-            </Link>
-          )}
         </div>
       </div>
     </nav>
