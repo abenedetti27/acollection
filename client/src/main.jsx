@@ -1,80 +1,35 @@
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App.jsx';
-import Home from './pages/Home.jsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-
-import Dashboard from './pages/Dashboard.jsx';
-import AddRecipe from './pages/AddRecipe.jsx';
-import FamilyRecipes from './pages/FamilyRecipes.jsx';
-import Search from './pages/Search.jsx';
-import Login from './pages/Login.jsx';
-import Recipe from './pages/Recipe.jsx';
-import EditRecipe from './pages/EditRecipe.jsx';
-import PinnedRecipes from './pages/PinnedRecipe.jsx'
-// Import MDB
-// Example: Adjust import path based on package structure or documentation
-import * as mdb from 'mdb-ui-kit'; // lib
-
-
-window.mdb = mdb;
-
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    // error: <NoMatch />,
-    children: [
-      {
-        index: true, 
-        element: <Home />
-      },
-      {
-        path:'/dashboard',
-        index: false, 
-        element: <Dashboard />
-      },
-      {
-        path:'/addrecipe',
-        index: false, 
-        element: <AddRecipe />
-      },
-      {
-        path:'/login',
-        index: false, 
-        element: <Login />
-      },
-      {
-        path:'/recipe/:id',
-        index: false, 
-        element: <Recipe />
-      },
-      {
-        path:'/familyrecipes/:familyId',
-        index: false, 
-        element: <FamilyRecipes />
-      },
-      {
-        path:'/editrecipe/:id',
-        index: false, 
-        element: <EditRecipe />
-      },
-      {
-        path:'/search/',
-        index: false, 
-        element: <Search />
-      },
-      {
-        path:'/pinnedrecipes/',
-        index: false, 
-        element: <PinnedRecipes />
-      }
-    ]
-  }
-]);
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App'; // Replace with your main App component
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import ArtistGallery1 from './pages/ArtistGallery1';
+import ArtistsPage from './pages/ArtistsPage';
+import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
+import FineArtParty from './pages/FineArtParty';
+import Galleries from './pages/Galleries';
+import PartyInfo from './pages/PartyInfo';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfUse from './pages/TermsOfUse';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
-)
+  <Router>
+    <App>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/artist-gallery-1" component={ArtistGallery1} />
+        <Route path="/artists" component={ArtistsPage} />
+        <Route path="/blog" component={BlogPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/fine-art-party" component={FineArtParty} />
+        <Route path="/galleries" component={Galleries} />
+        <Route path="/party-info" component={PartyInfo} />
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/terms-of-use" component={TermsOfUse} />
+      </Switch>
+    </App>
+  </Router>
+);

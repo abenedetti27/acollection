@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo/1.png';
 
-const HomePage = () => {
+const Home = () => {
   return (
     <div className="home-page">
       {/* Navbar */}
@@ -34,4 +34,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
