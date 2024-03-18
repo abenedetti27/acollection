@@ -1,4 +1,4 @@
-import React from 'react';
+// Remove the unused import statement for React
 import ReactDOM from 'react-dom';
 import App from './components/App'; // Replace with your main App component
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
